@@ -8,10 +8,13 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.security.access.prepost.PreAuthorize;
+
 
 @RestController
 @RequestMapping("/api/posts")
 @RequiredArgsConstructor
+@PreAuthorize("isAuthenticated()")
 public class PostController {
     private final PostService postService;
 

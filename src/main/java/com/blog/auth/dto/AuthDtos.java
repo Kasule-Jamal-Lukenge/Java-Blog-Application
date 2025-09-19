@@ -1,6 +1,7 @@
 package com.blog.auth.dto;
 
 import jakarta.validation.constraints.*;
+import lombok.Data;
 
 public class AuthDtos{
     public record RegisterRequest (
